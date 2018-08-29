@@ -4,6 +4,12 @@
 
 ## Build Setup
 
+   git status 
+   git add  <file>
+   git commit -m 'xxxxx'
+　$ git push -u origin master //第一次提交 添加命令参数 -u 确保关联本地库和远程库
+　$ git push origin master //非第一次提交使用此命令即可
+
 ``` bash
 # install dependencies
 npm install

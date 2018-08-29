@@ -2,6 +2,11 @@
   <div id="app">
     <img src="./assets/logo.png">
     <div>
+    <p>
+      <button @click="goGo"> 前进</button>
+      <button @click="goBack"> 后退</button>
+      <button @click="gohome"> 返回首页</button>
+    </p>
       <router-link to="/">首页</router-link> |
       <router-link to="/Hi">hi首页</router-link> |
       <router-link :to="{name:'hi1',params:{username:'jspang',id:'666'}}">hi首页1</router-link> |
@@ -10,7 +15,7 @@
       <br>
       <router-link to="/goHome">goHome</router-link>
       <router-link to="/params/192/newsContent is great">Params</router-link>
-    
+      <router-link to="/1232132">我是404测试</router-link>
     <transition name="fade" mode="in-out">
       <router-view></router-view>
     </transition>
@@ -25,7 +30,18 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    goGo(){
+      this.$router.go(1);
+    },
+    goBack(){
+      this.$router.go(-1);
+    },
+    gohome(){
+      this.$router.push('/');
+    }
+  }
 }
 </script>
 
